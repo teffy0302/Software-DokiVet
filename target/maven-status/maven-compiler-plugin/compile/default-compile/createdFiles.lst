@@ -1,0 +1,6 @@
+com\mycompany\dokivetweb\JakartaRestConfiguration.class
+Conexion\ConexionDB.class
+com\mycompany\dokivetweb\resources\JakartaEE10Resource.class
+servlets\SvRegistro.class
+servlets\SvCerrarSesion.class
+servlets\SvInicioSesion.class

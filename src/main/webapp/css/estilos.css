@@ -1,0 +1,224 @@
+/* estilos.css */
+
+/* =======================================
+   1. ESTILOS GENERALES Y BODY
+   ======================================= */
+body {
+    background-image: url('../img/fondo-patitas.png'); 
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+    padding-top: 70px; /* Espacio para el header fijo */
+    color: #333; 
+}
+
+/* =======================================
+   2. BARRA NEGRA SUPERIOR Y LOGO DE LA ESQUINA (INICIALES)
+   ======================================= */
+.header-negro {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 100; 
+}
+
+.header-negro h1 {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* LOGO PEQUEÑO EN LA ESQUINA (AHORA ES EL LOGO DE INICIALES) */
+.logo-esquina {
+    position: fixed;
+    top: 10px; 
+    right: 10px; 
+    z-index: 101; 
+}
+
+.logo-redondo-pequeno {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    /* Borde azul claro para ambos logos */
+    border: 3px solid rgba(144, 238, 244, 0.9); 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: block;
+    /* Ajuste de fondo por si el logo de iniciales no es redondo por sí mismo */
+    background-color: white; 
+}
+
+/* =======================================
+   3. CONTENEDOR DE FORMULARIO Y LOGO CENTRADO (PERRITO)
+   ======================================= */
+.contenedor-formulario {
+    background-color: rgba(144, 238, 244, 0.9);
+    border-radius: 20px;
+    padding: 20px; 
+    
+    /* ESPACIO SUPERIOR DEFINITIVO para el logo del perrito */
+    padding-top: 120px; /* Reducimos el padding, el logo perrito es más compacto */
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%; 
+    max-width: 400px; 
+    text-align: center;
+    margin: 30px auto 50px auto; 
+    position: relative; /* CRÍTICO: Para posicionar el logo centrado */
+}
+
+/* LOGO GRANDE CENTRADO (AHORA ES EL LOGO DEL PERRITO) */
+.logo-centrado-formulario {
+    width: 140px; /* Tamaño mediano/grande */
+    height: 140px; 
+    border-radius: 100%; /* Asegura que la imagen sea un círculo */
+    border: 3px solid rgba(144, 238, 244, 0.9); /* Lineado azul claro */
+
+    position: absolute; 
+    top: -30px; /* Sube la imagen para que esté centrada sobre el borde */
+    left: 50%;
+    transform: translateX(-50%); 
+    display: block; 
+    background-color: white; /* Fondo blanco para el logo redondo */
+    z-index: 11;
+}
+
+/* =======================================
+   4. ELEMENTOS DE FORMULARIO (INPUTS, BOTONES, ETC.)
+   ======================================= */
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+    width: calc(100% - 45px); 
+    padding: 10px 10px 10px 35px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; 
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-image: url('../img/huella-icono.png'); 
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 8px center; 
+    
+    /* HUELLITA DECORATIVA EN EL INPUT */
+    background-image: url('../img/huella-icono.png'); 
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 8px center; 
+}
+
+/* Etiqueta de fecha de nacimiento */
+.contenedor-formulario label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 5px 0;
+    font-weight: bold;
+    color: #008CBA;
+}
+
+/* Botón principal */
+.boton-principal {
+    background-color: #008CBA; 
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    width: auto;
+    min-width: 180px;
+}
+
+.boton-principal:hover {
+    background-color: #005f7c;
+}
+
+/* Huellitas como decoración en el botón */
+.boton-principal::before, .boton-principal::after {
+    content: '🐾'; 
+    margin: 0 5px;
+}
+
+/* Mensajes de error */
+.mensaje-error {
+    color: #ff0000;
+    background-color: #fdd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border: 1px solid red;
+}
+
+/* Estilos de las tarjetas del Dashboard (bienvenida.jsp) */
+.tarjeta-menu {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 45%; 
+    min-width: 150px;
+    transition: transform 0.2s;
+}
+.contenedor-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin-top: 20px;
+}
+.boton-cerrar-sesion {
+     background-color: #f44336; 
+     color: white;
+     border-radius: 20px;
+     padding: 8px 15px;
+     margin-top: 30px;
+     cursor: pointer;
+     border: none;
+}
+
+/* =======================================
+   5. MEDIA QUERY (Móviles)
+   ======================================= */
+@media (max-width: 600px) {
+    
+    body {
+        padding-top: 60px; 
+    }
+    
+    .header-negro {
+        padding: 10px 0;
+    }
+    
+    .header-negro h1 {
+        font-size: 1.5em;
+    }
+    
+    .contenedor-formulario {
+        width: 95%;
+        padding-top: 120px; /* Ajuste móvil */
+    }
+    
+    .logo-redondo-pequeno {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .logo-centrado-formulario {
+        width: 150px;
+        top: -80px; 
+    }
+}
