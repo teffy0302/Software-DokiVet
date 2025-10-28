@@ -1,0 +1,7 @@
+http://localhost:8080/DokiVetWeb/registro.jsp
+
+
+http://localhost:8080/DokiVetWeb/inicio_sesion.jsp
+
+
+http://localhost:8080/DokiVetWeb/error_registro.jsp
